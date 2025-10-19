@@ -4,8 +4,7 @@ package ch01.ex1_ATasteOfKotlin
  * @author runningpig66
  * @date 2025/10/13 周一
  * @time 10:53
- * 代码清单 P.4
- * 代码清单 1.1 Kotlin 初体验
+ * P.4 代码清单 1.1 Kotlin 初体验
  */
 data class Person(val name: String, val age: Int? = null)
 

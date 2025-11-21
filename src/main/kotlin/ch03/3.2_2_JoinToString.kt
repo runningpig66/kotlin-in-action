@@ -4,7 +4,7 @@ package ch03.JoinToString
  * @author runningpig66
  * @date 2025/11/19 周三
  * @time 1:42
- * 3.2 让函数更好调
+ * §3.2 让函数更好调
  * P.47 代码清单 3.1 joinToString() 的基本实现
  */
 

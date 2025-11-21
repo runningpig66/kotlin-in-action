@@ -4,7 +4,7 @@ package ch03.ex1_1_CreatingCollectionsInKotlin
  * @author runningpig66
  * @date 2025/11/19 周三
  * @time 1:09
- * 3.1 在 Kotlin 中创建集合
+ * §3.1 在 Kotlin 中创建集合
  * P.46 代码清单
  */
 

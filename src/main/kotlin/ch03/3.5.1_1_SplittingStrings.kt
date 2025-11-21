@@ -4,7 +4,7 @@ package ch03.ex5_1_1_SplittingStrings
  * @author runningpig66
  * @date 2025/11/20 周四
  * @time 4:35
- * 3.5 字符串和正则表达式的处理：3.5.1 分割字符串
+ * §3.5 字符串和正则表达式的处理 §3.5.1 分割字符串
  * P.62 代码清单
  *
  * notes: SplittingStrings.md

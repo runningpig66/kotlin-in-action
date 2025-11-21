@@ -4,7 +4,7 @@ package ch03.ex5_2_2_RegularExpressionsAndTriplequotedStrings1
  * @author runningpig66
  * @date 2025/11/20 周四
  * @time 5:40
- * 3.5 字符串和正则表达式的处理：3.5.2 正则表达式三重引号的字符串
+ * §3.5 字符串和正则表达式的处理 §3.5.2 正则表达式三重引号的字符串
  * P.63 代码清单 3.10 使用正则表达式解析文件路径 & P.65 代码清单
  */
 

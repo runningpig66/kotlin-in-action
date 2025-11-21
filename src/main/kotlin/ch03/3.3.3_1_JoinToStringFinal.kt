@@ -4,7 +4,7 @@ package ch03.JoinToStringFinal
  * @author runningpig66
  * @date 2025/11/19 周三
  * @time 3:50
- * 3.3 给别人的类添加方法：扩展函数和属性：3.3.3 作为扩展函数的工具函数
+ * §3.3 给别人的类添加方法：扩展函数和属性 §3.3.3 作为扩展函数的工具函数
  * P.55 代码清单 3.4 声明扩展函数 joinToString()
  *
  * 现在，可以写一个 joinToString 函数的终极版本了，它和你在 Kotlin标准库中看到的一模一样。

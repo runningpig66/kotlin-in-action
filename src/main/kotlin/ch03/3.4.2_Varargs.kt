@@ -4,7 +4,7 @@ package ch03.ex4_2_Varargs
  * @author runningpig66
  * @date 2025/11/19 周三
  * @time 5:01
- * 3.4 处理集合：可变参数、中缀调用和库的支持：3.4.2 可变参数：让函数支持任意数量的参数
+ * §3.4 处理集合：可变参数、中缀调用和库的支持 §3.4.2 可变参数：让函数支持任意数量的参数
  * P.60 代码清单
  * {Program arguments: arg1 arg2 arg3}
  *

@@ -5,7 +5,7 @@ package strings // 包的声明跟在文件注解之后
  * @author runningpig66
  * @date 2025/11/19 周三
  * @time 2:40
- * 3.2 让函数更好调：3.2.3 消除静态工具类：顶层函数和属性
+ * §3.2 让函数更好调 §3.2.3 消除静态工具类：顶层函数和属性
  * P.51 代码清单 3.3 声明 joinToString() 作为顶层函数
  *
  * 可以看到 Kotlin 编译生成的类的名称（见 JoinToStringTest.java 注释 [1]），对应于包含函数的文件的名称。

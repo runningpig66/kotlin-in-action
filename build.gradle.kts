@@ -16,6 +16,18 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+// 跳过编译的文件
+val willNotCompile = listOf(
+    "**/ch04/4.1.3_1_VisibilityModifiers.kt",
+)
+
 kotlin {
     jvmToolchain(21)
+
+    sourceSets {
+        val main by getting {
+            kotlin.exclude(willNotCompile)
+        }
+    }
 }

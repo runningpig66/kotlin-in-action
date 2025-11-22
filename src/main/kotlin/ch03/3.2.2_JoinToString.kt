@@ -11,6 +11,8 @@ package ch03
  * 让我们尝试改进一下前面的 joinToString 函数。在大多数情况下，
  * 字符串可以不加前缀或者后缀并用逗号分隔。所以，我们把这些设置为默认值。
  */
+// @JvmOverloads 会在字节码层面帮你自动生成多个 Java 构造器重载，
+// 对 Java/框架来说，效果等价于你手写多个 secondary constructor.
 @JvmOverloads
 fun <T> joinToString(
     collection: Collection<T>,

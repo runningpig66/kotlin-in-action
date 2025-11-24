@@ -1,7 +1,5 @@
 package ch04.ex3_3_ClassDelegationUsingTheByKeyword
 
-import java.util.function.IntFunction
-
 /**
  * @author runningpig66
  * @date 2025/11/23 周日
@@ -32,7 +30,6 @@ class CountingSet<T>(val innerSet: MutableCollection<T> = HashSet()) :
         objectsAdded += elements.size
         return innerSet.addAll(elements)
     }
-
 }
 
 fun main() {

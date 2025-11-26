@@ -12,6 +12,8 @@ package ch04.ex4_2_2_CompanionObjects1
  *
  * notes: CompanionObjects.md
  * （伴生）对象字节码对比
+ * notes: ObjectsDiff.md
+ * 既然 companion object 和 普通嵌套 object 都是“嵌套单例”，为啥 Kotlin 还要区分成两种？
  */
 
 fun getFacebookName(accountId: Int): String = "fb:$accountId"

@@ -9,6 +9,9 @@ package ch04.ex4_1_2_ObjectDeclarations1
  *
  * 同样可以在类中声明对象。这样的对象同样只有一个单一实例；它们在每个容器类的实例中并不具有不同的实例。
  * 例如，在类中放置一个用来比较特定对象的比较器是合乎逻辑的。
+ *
+ * notes: ObjectsDiff.md
+ * 既然 companion object 和 普通嵌套 object 都是“嵌套单例”，为啥 Kotlin 还要区分成两种？
  */
 data class Person(val name: String) {
     object NameComparator : Comparator<Person> {

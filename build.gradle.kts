@@ -31,3 +31,12 @@ kotlin {
         }
     }
 }
+
+// 见 OneNote 《控制台中文日文乱码汇总》
+tasks.withType<JavaExec>().configureEach {
+    jvmArgs(
+        "-Dsun.stdout.encoding=UTF-8",
+        "-Dsun.stderr.encoding=UTF-8",
+        "-Dfile.encoding=UTF-8"
+    )
+}

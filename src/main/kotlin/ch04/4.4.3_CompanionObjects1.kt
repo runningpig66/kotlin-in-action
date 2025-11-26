@@ -11,6 +11,8 @@ package ch04.ex4_3_CompanionObjects1
  *
  * notes: CompanionObjects.md
  * （伴生）对象字节码对比
+ * notes: ObjectsDiff.md
+ * 既然 companion object 和 普通嵌套 object 都是“嵌套单例”，为啥 Kotlin 还要区分成两种？
  */
 class Person(val name: String) {
     // 在大多数情况下，通过包含伴生对象的类的名字来引用伴生对象，所以不必关心它的名字。但是如果需要你也可以指明；

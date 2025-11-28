@@ -69,14 +69,14 @@ fun main() {
     // *3. 函数类型变量 —— 纯函数类型，跟 OnClickListener 不是一个类型
     val fn: (View) -> Unit = { view: View -> println("button3 clicked") }
     // 想变成 OnClickListener，必须用 SAM 构造器：
-    val listener3 = OnClickListener(fn)
+    val listener3: OnClickListener = OnClickListener(fn)
     val button3 = Button()
     button3.setOnClickListener(listener3)
     button3.onClick()
 
     // *? OnClickListener { ... } 是什么语法？
     // *3.1 OnClickListener { ... }` —— fun interface 的构造器语法
-    val listener3_1 = OnClickListener { view: View -> println("button3_1 clicked") }
+    val listener3_1: OnClickListener = OnClickListener { view: View -> println("button3_1 clicked") }
     val button3_1 = Button()
     button3_1.setOnClickListener(listener3_1)
     button3_1.onClick()

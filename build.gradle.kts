@@ -20,6 +20,9 @@ tasks.test {
 // 跳过编译的文件
 val willNotCompile = listOf(
     "**/ch04/4.1.3_1_VisibilityModifiers.kt",
+    "**/ch06/6.1.4_2_ElvisOperator1.kt",
+    "**/ch06/6.1.6_NotnullAssertions.kt",
+    "**/ch06/6.1.11.1_2_PlatformTypes.kt",
 )
 
 kotlin {

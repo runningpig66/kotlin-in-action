@@ -23,6 +23,7 @@ val willNotCompile = listOf(
     "**/ch06/6.1.4_2_ElvisOperator1.kt",
     "**/ch06/6.1.6_NotnullAssertions.kt",
     "**/ch06/6.1.11.1_2_PlatformTypes.kt",
+    "**/ch06/6.2.6_NothingType.kt",
 )
 
 kotlin {

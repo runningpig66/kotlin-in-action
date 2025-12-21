@@ -1,4 +1,4 @@
-package ch07.ex1_2_3_CompoundAssignmentOperators3
+package ch07.ex1_2_4_CompoundAssignmentOperators3
 
 /**
  * @author runningpig66

@@ -36,7 +36,16 @@ kotlin {
     }
 }
 
-// 见 OneNote 《控制台中文日文乱码汇总》
+tasks.withType<JavaCompile>().configureEach {
+    options.compilerArgs.apply {
+        add("-Xlint:unchecked")
+        add("-Xlint:deprecation")
+        add("-Xdiags:verbose")
+        // add("-Werror")
+    }
+    options.encoding = "UTF-8"
+}
+
 tasks.withType<JavaExec>().configureEach {
     jvmArgs(
         "-Dsun.stdout.encoding=UTF-8",

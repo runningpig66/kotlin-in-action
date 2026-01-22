@@ -33,6 +33,7 @@ class Point(val x: Int, val y: Int) : Any() {
     }
 }
 
+@Suppress("SENSELESS_COMPARISON")
 fun main() {
     println(Point(10, 20) == Point(10, 20))
     println(Point(10, 20) != Point(5, 5))

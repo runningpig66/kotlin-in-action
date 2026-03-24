@@ -14,6 +14,8 @@ dependencies {
     val kotlinxHtmlVersion = "0.12.0"
     // include for JVM target
     implementation("org.jetbrains.kotlinx:kotlinx-html-jvm:$kotlinxHtmlVersion")
+    val coroutinesVersion = "1.10.2"
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
 }
 
 tasks.test {

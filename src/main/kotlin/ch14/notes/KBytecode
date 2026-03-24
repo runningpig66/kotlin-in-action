@@ -1,0 +1,392 @@
+// ================ch14/_2_UsingRunBlockingKt.class =================
+// class version 52.0 (52)
+// access flags 0x31
+public final class ch14/_2_UsingRunBlockingKt {
+
+  // compiled from: 2_UsingRunBlocking.kt
+
+  @Lkotlin/Metadata;(mv={2, 2, 0}, k=2, xi=48, d1={"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0008\u0003\u001a\u000e\u0010\u0000\u001a\u00020\u0001H\u0086@\u00a2\u0006\u0002\u0010\u0002\u001a\u0006\u0010\u0003\u001a\u00020\u0001\u00a8\u0006\u0004"}, d2={"doSomethingSlowly", "", "(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "main", "kotlin-in-action.main"})
+  // access flags 0x18
+  final static INNERCLASS ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1 null null
+  // access flags 0x18
+  final static INNERCLASS ch14/_2_UsingRunBlockingKt$main$1 null null
+  // access flags 0x19
+  public final static INNERCLASS kotlin/time/Duration$Companion kotlin/time/Duration Companion
+
+  // access flags 0x19
+  // signature (Lkotlin/coroutines/Continuation<-Lkotlin/Unit;>;)Ljava/lang/Object;
+  // declaration:  doSomethingSlowly(kotlin.coroutines.Continuation<? super kotlin.Unit>)
+  public final static doSomethingSlowly(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+  @Lorg/jetbrains/annotations/Nullable;() // invisible
+    // annotable parameter count: 1 (invisible)`
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+   L0
+    ALOAD 0
+    INSTANCEOF ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1
+    IFEQ L1
+    ALOAD 0
+    CHECKCAST ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1
+    ASTORE 4
+    ALOAD 4
+    GETFIELD ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1.label : I
+    LDC -2147483648
+    IAND
+    IFEQ L1
+    ALOAD 4
+    DUP
+    GETFIELD ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1.label : I
+    LDC -2147483648
+    ISUB
+    PUTFIELD ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1.label : I
+    GOTO L2
+   L1
+   FRAME SAME
+    NEW ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1
+    DUP
+    ALOAD 0
+    INVOKESPECIAL ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1.<init> (Lkotlin/coroutines/Continuation;)V
+    ASTORE 4
+   L2
+   FRAME FULL [kotlin/coroutines/Continuation T T T ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1] []
+    ALOAD 4
+    GETFIELD ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1.result : Ljava/lang/Object;
+    ASTORE 3
+   L3
+    INVOKESTATIC kotlin/coroutines/intrinsics/IntrinsicsKt.getCOROUTINE_SUSPENDED ()Ljava/lang/Object;
+   L4
+    LINENUMBER 14 L4
+    ASTORE 5
+    ALOAD 4
+    GETFIELD ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1.label : I
+    TABLESWITCH
+      0: L5
+      1: L6
+      default: L7
+   L5
+   FRAME FULL [kotlin/coroutines/Continuation T T java/lang/Object ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1 java/lang/Object] []
+    ALOAD 3
+    INVOKESTATIC kotlin/ResultKt.throwOnFailure (Ljava/lang/Object;)V
+   L8
+    LINENUMBER 16 L8
+    GETSTATIC kotlin/time/Duration.Companion : Lkotlin/time/Duration$Companion;
+    ASTORE 1
+    SIPUSH 3000
+    ISTORE 2
+    NOP
+    ILOAD 2
+    GETSTATIC kotlin/time/DurationUnit.MILLISECONDS : Lkotlin/time/DurationUnit;
+    INVOKESTATIC kotlin/time/DurationKt.toDuration (ILkotlin/time/DurationUnit;)J
+    NOP
+    GOTO L9
+   L9
+   FRAME FULL [kotlin/coroutines/Continuation kotlin/time/Duration$Companion I java/lang/Object ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1 java/lang/Object] [J]
+    ALOAD 4
+   L10
+    LINENUMBER 16 L10
+    ALOAD 4
+    ICONST_1
+    PUTFIELD ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1.label : I
+    INVOKESTATIC kotlinx/coroutines/DelayKt.delay-VtjQ1oo (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    DUP
+    ALOAD 5
+    IF_ACMPNE L11
+   L12
+    LINENUMBER 14 L12
+    ALOAD 5
+    ARETURN
+   L6
+   FRAME FULL [kotlin/coroutines/Continuation T T java/lang/Object ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1 java/lang/Object] []
+    NOP
+    ALOAD 3
+    INVOKESTATIC kotlin/ResultKt.throwOnFailure (Ljava/lang/Object;)V
+    ALOAD 3
+   L11
+    LINENUMBER 17 L11
+   FRAME SAME1 java/lang/Object
+    POP
+    LDC "I'm done"
+    ASTORE 1
+    NOP
+    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
+    ALOAD 1
+    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
+    NOP
+    GOTO L13
+   L13
+    LINENUMBER 18 L13
+   FRAME FULL [kotlin/coroutines/Continuation java/lang/String T java/lang/Object ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1 java/lang/Object] []
+    NOP
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    ARETURN
+   L7
+    LINENUMBER 14 L7
+   FRAME FULL [kotlin/coroutines/Continuation T T java/lang/Object ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1 java/lang/Object] []
+    NEW java/lang/IllegalStateException
+    DUP
+    LDC "call to 'resume' before 'invoke' with coroutine"
+    INVOKESPECIAL java/lang/IllegalStateException.<init> (Ljava/lang/String;)V
+    ATHROW
+   L14
+    LOCALVARIABLE $completion Lkotlin/coroutines/Continuation; L0 L14 0
+    LOCALVARIABLE $continuation Lkotlin/coroutines/Continuation; L2 L7 4
+    LOCALVARIABLE $result Ljava/lang/Object; L3 L7 3
+    MAXSTACK = 5
+    MAXLOCALS = 6
+
+  // access flags 0x19
+  public final static main()V
+   L0
+    LINENUMBER 21 L0
+    ACONST_NULL
+    NEW ch14/_2_UsingRunBlockingKt$main$1
+    DUP
+    ACONST_NULL
+    INVOKESPECIAL ch14/_2_UsingRunBlockingKt$main$1.<init> (Lkotlin/coroutines/Continuation;)V
+    CHECKCAST kotlin/jvm/functions/Function2
+    ICONST_1
+    ACONST_NULL
+    INVOKESTATIC kotlinx/coroutines/BuildersKt.runBlocking$default (Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Ljava/lang/Object;
+    POP
+   L1
+    LINENUMBER 24 L1
+    RETURN
+    MAXSTACK = 4
+    MAXLOCALS = 0
+
+  // access flags 0x1009
+  public static synthetic main([Ljava/lang/String;)V
+   L0
+    INVOKESTATIC ch14/_2_UsingRunBlockingKt.main ()V
+    NOP
+    RETURN
+   L1
+    LOCALVARIABLE args [Ljava/lang/String; L0 L1 0
+    MAXSTACK = 0
+    MAXLOCALS = 1
+}
+
+
+// ================ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1.class =================
+// class version 52.0 (52)
+// access flags 0x30
+final class ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1 extends kotlin/coroutines/jvm/internal/ContinuationImpl {
+
+  // compiled from: 2_UsingRunBlocking.kt
+  OUTERCLASS ch14/_2_UsingRunBlockingKt doSomethingSlowly (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+  @Lkotlin/coroutines/jvm/internal/DebugMetadata;(f="2_UsingRunBlocking.kt", l={16}, i={}, s={}, n={}, m="doSomethingSlowly", c="ch14._2_UsingRunBlockingKt", v=1)
+
+  @Lkotlin/Metadata;(mv={2, 2, 0}, k=3, xi=48)
+  // access flags 0x18
+  final static INNERCLASS ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1 null null
+
+  // access flags 0x1000
+  synthetic Ljava/lang/Object; result
+
+  // access flags 0x0
+  I label
+
+  // access flags 0x0
+  // signature (Lkotlin/coroutines/Continuation<-Lch14/_2_UsingRunBlockingKt$doSomethingSlowly$1;>;)V
+  // declaration: void <init>(kotlin.coroutines.Continuation<? super ch14._2_UsingRunBlockingKt$doSomethingSlowly$1>)
+  <init>(Lkotlin/coroutines/Continuation;)V
+   L0
+    ALOAD 0
+    ALOAD 1
+    INVOKESPECIAL kotlin/coroutines/jvm/internal/ContinuationImpl.<init> (Lkotlin/coroutines/Continuation;)V
+    NOP
+    RETURN
+   L1
+    LOCALVARIABLE this Lch14/_2_UsingRunBlockingKt$doSomethingSlowly$1; L0 L1 0
+    LOCALVARIABLE $completion Lkotlin/coroutines/Continuation; L0 L1 1
+    MAXSTACK = 2
+    MAXLOCALS = 2
+
+  // access flags 0x11
+  public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+  @Lorg/jetbrains/annotations/Nullable;() // invisible
+    // annotable parameter count: 1 (invisible)
+    @Lorg/jetbrains/annotations/NotNull;() // invisible, parameter 0
+   L0
+    ALOAD 0
+    ALOAD 1
+    PUTFIELD ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1.result : Ljava/lang/Object;
+    ALOAD 0
+    ALOAD 0
+    GETFIELD ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1.label : I
+    LDC -2147483648
+    IOR
+    PUTFIELD ch14/_2_UsingRunBlockingKt$doSomethingSlowly$1.label : I
+    ALOAD 0
+    CHECKCAST kotlin/coroutines/Continuation
+    INVOKESTATIC ch14/_2_UsingRunBlockingKt.doSomethingSlowly (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    ARETURN
+   L1
+    LOCALVARIABLE this Lch14/_2_UsingRunBlockingKt$doSomethingSlowly$1; L0 L1 0
+    LOCALVARIABLE $result Ljava/lang/Object; L0 L1 1
+    MAXSTACK = 3
+    MAXLOCALS = 2
+}
+
+
+// ================ch14/_2_UsingRunBlockingKt$main$1.class =================
+// class version 52.0 (52)
+// access flags 0x30
+// signature Lkotlin/coroutines/jvm/internal/SuspendLambda;Lkotlin/jvm/functions/Function2<Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation<-Lkotlin/Unit;>;Ljava/lang/Object;>;
+// declaration: ch14/_2_UsingRunBlockingKt$main$1 extends kotlin.coroutines.jvm.internal.SuspendLambda implements kotlin.jvm.functions.Function2<kotlinx.coroutines.CoroutineScope, kotlin.coroutines.Continuation<? super kotlin.Unit>, java.lang.Object>
+final class ch14/_2_UsingRunBlockingKt$main$1 extends kotlin/coroutines/jvm/internal/SuspendLambda implements kotlin/jvm/functions/Function2 {
+
+  // compiled from: 2_UsingRunBlocking.kt
+  OUTERCLASS ch14/_2_UsingRunBlockingKt main ()V
+
+  @Lkotlin/coroutines/jvm/internal/DebugMetadata;(f="2_UsingRunBlocking.kt", l={22}, i={}, s={}, n={}, m="invokeSuspend", c="ch14._2_UsingRunBlockingKt$main$1", v=1)
+
+  @Lkotlin/Metadata;(mv={2, 2, 0}, k=3, xi=48, d1={"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\n"}, d2={"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"})
+  // access flags 0x18
+  final static INNERCLASS ch14/_2_UsingRunBlockingKt$main$1 null null
+
+  // access flags 0x0
+  I label
+
+  // access flags 0x0
+  // signature (Lkotlin/coroutines/Continuation<-Lch14/_2_UsingRunBlockingKt$main$1;>;)V
+  // declaration: void <init>(kotlin.coroutines.Continuation<? super ch14._2_UsingRunBlockingKt$main$1>)
+  <init>(Lkotlin/coroutines/Continuation;)V
+   L0
+    ALOAD 0
+    ICONST_2
+    ALOAD 1
+    INVOKESPECIAL kotlin/coroutines/jvm/internal/SuspendLambda.<init> (ILkotlin/coroutines/Continuation;)V
+    NOP
+    RETURN
+   L1
+    LOCALVARIABLE this Lch14/_2_UsingRunBlockingKt$main$1; L0 L1 0
+    LOCALVARIABLE $completion Lkotlin/coroutines/Continuation; L0 L1 1
+    MAXSTACK = 3
+    MAXLOCALS = 2
+
+  // access flags 0x11
+  public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+   L0
+    INVOKESTATIC kotlin/coroutines/intrinsics/IntrinsicsKt.getCOROUTINE_SUSPENDED ()Ljava/lang/Object;
+   L1
+    LINENUMBER 21 L1
+    ASTORE 3
+    ALOAD 0
+    GETFIELD ch14/_2_UsingRunBlockingKt$main$1.label : I
+    TABLESWITCH
+      0: L2
+      1: L3
+      default: L4
+   L2
+   FRAME APPEND [T java/lang/Object]
+    ALOAD 1
+    INVOKESTATIC kotlin/ResultKt.throwOnFailure (Ljava/lang/Object;)V
+    ALOAD 0
+    CHECKCAST kotlin/coroutines/Continuation
+   L5
+    LINENUMBER 22 L5
+    ALOAD 0
+    ICONST_1
+    PUTFIELD ch14/_2_UsingRunBlockingKt$main$1.label : I
+    INVOKESTATIC ch14/_2_UsingRunBlockingKt.doSomethingSlowly (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    DUP
+    ALOAD 3
+    IF_ACMPNE L6
+   L7
+    LINENUMBER 21 L7
+    ALOAD 3
+    ARETURN
+   L3
+   FRAME SAME
+    NOP
+    ALOAD 1
+    INVOKESTATIC kotlin/ResultKt.throwOnFailure (Ljava/lang/Object;)V
+    ALOAD 1
+   L6
+    LINENUMBER 23 L6
+   FRAME SAME1 java/lang/Object
+    POP
+    LDC "blocking after delay"
+    ASTORE 2
+    NOP
+    GETSTATIC java/lang/System.out : Ljava/io/PrintStream;
+    ALOAD 2
+    INVOKEVIRTUAL java/io/PrintStream.println (Ljava/lang/Object;)V
+    NOP
+    GOTO L8
+   L8
+    LINENUMBER 24 L8
+   FRAME FULL [ch14/_2_UsingRunBlockingKt$main$1 java/lang/Object java/lang/String java/lang/Object] []
+    NOP
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    ARETURN
+   L4
+    LINENUMBER 21 L4
+   FRAME FULL [ch14/_2_UsingRunBlockingKt$main$1 java/lang/Object T java/lang/Object] []
+    NEW java/lang/IllegalStateException
+    DUP
+    LDC "call to 'resume' before 'invoke' with coroutine"
+    INVOKESPECIAL java/lang/IllegalStateException.<init> (Ljava/lang/String;)V
+    ATHROW
+   L9
+    LOCALVARIABLE this Lch14/_2_UsingRunBlockingKt$main$1; L0 L9 0
+    LOCALVARIABLE $result Ljava/lang/Object; L0 L9 1
+    MAXSTACK = 3
+    MAXLOCALS = 4
+
+  // access flags 0x11
+  // signature (Ljava/lang/Object;Lkotlin/coroutines/Continuation<*>;)Lkotlin/coroutines/Continuation<Lkotlin/Unit;>;
+  // declaration: kotlin.coroutines.Continuation<kotlin.Unit> create(java.lang.Object, kotlin.coroutines.Continuation<?>)
+  public final create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+   L0
+    NEW ch14/_2_UsingRunBlockingKt$main$1
+    DUP
+    ALOAD 2
+    INVOKESPECIAL ch14/_2_UsingRunBlockingKt$main$1.<init> (Lkotlin/coroutines/Continuation;)V
+    CHECKCAST kotlin/coroutines/Continuation
+    ARETURN
+   L1
+    LOCALVARIABLE this Lch14/_2_UsingRunBlockingKt$main$1; L0 L1 0
+    LOCALVARIABLE value Ljava/lang/Object; L0 L1 1
+    LOCALVARIABLE $completion Lkotlin/coroutines/Continuation; L0 L1 2
+    MAXSTACK = 3
+    MAXLOCALS = 3
+
+  // access flags 0x11
+  // signature (Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation<-Lkotlin/Unit;>;)Ljava/lang/Object;
+  // declaration:  invoke(kotlinx.coroutines.CoroutineScope, kotlin.coroutines.Continuation<? super kotlin.Unit>)
+  public final invoke(Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+   L0
+    ALOAD 0
+    ALOAD 1
+    ALOAD 2
+    INVOKEVIRTUAL ch14/_2_UsingRunBlockingKt$main$1.create (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    CHECKCAST ch14/_2_UsingRunBlockingKt$main$1
+    GETSTATIC kotlin/Unit.INSTANCE : Lkotlin/Unit;
+    INVOKEVIRTUAL ch14/_2_UsingRunBlockingKt$main$1.invokeSuspend (Ljava/lang/Object;)Ljava/lang/Object;
+    ARETURN
+   L1
+    LOCALVARIABLE this Lch14/_2_UsingRunBlockingKt$main$1; L0 L1 0
+    LOCALVARIABLE p1 Lkotlinx/coroutines/CoroutineScope; L0 L1 1
+    LOCALVARIABLE p2 Lkotlin/coroutines/Continuation; L0 L1 2
+    MAXSTACK = 3
+    MAXLOCALS = 3
+
+  // access flags 0x1041
+  public synthetic bridge invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+   L0
+    ALOAD 0
+    ALOAD 1
+    CHECKCAST kotlinx/coroutines/CoroutineScope
+    ALOAD 2
+    CHECKCAST kotlin/coroutines/Continuation
+    INVOKEVIRTUAL ch14/_2_UsingRunBlockingKt$main$1.invoke (Lkotlinx/coroutines/CoroutineScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    ARETURN
+   L1
+    LOCALVARIABLE this Lch14/_2_UsingRunBlockingKt$main$1; L0 L1 0
+    LOCALVARIABLE p1 Ljava/lang/Object; L0 L1 1
+    LOCALVARIABLE p2 Ljava/lang/Object; L0 L1 2
+    MAXSTACK = 3
+    MAXLOCALS = 3
+}
